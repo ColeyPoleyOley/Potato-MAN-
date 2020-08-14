@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("Jump");
             rb.AddForce(Vector2.up * jumpForce);
@@ -37,5 +37,8 @@ public class PlayerController : MonoBehaviour
 
 
         }//end if
+
+        anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetBool("Grounded", grounded);
     }
 }
