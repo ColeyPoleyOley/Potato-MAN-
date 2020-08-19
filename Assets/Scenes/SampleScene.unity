@@ -340,31 +340,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8049795329319357848, guid: 61c93067389f09744b477c35e66d6cfe,
-        type: 3}
-      propertyPath: spawnPosition.Array.data[0]
-      value: 
-      objectReference: {fileID: 62531765}
-    - target: {fileID: 8049795329319357848, guid: 61c93067389f09744b477c35e66d6cfe,
-        type: 3}
-      propertyPath: spawnPosition.Array.data[1]
-      value: 
-      objectReference: {fileID: 463674114}
-    - target: {fileID: 8049795329319357848, guid: 61c93067389f09744b477c35e66d6cfe,
-        type: 3}
-      propertyPath: spawnPosition.Array.data[2]
-      value: 
-      objectReference: {fileID: 555256046}
-    - target: {fileID: 8049795329319357848, guid: 61c93067389f09744b477c35e66d6cfe,
-        type: 3}
-      propertyPath: endPosition
-      value: 
-      objectReference: {fileID: 1098864983}
-    - target: {fileID: 8049795329319357848, guid: 61c93067389f09744b477c35e66d6cfe,
-        type: 3}
-      propertyPath: moveVel
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 8049795329319357851, guid: 61c93067389f09744b477c35e66d6cfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -419,11 +394,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049795329319357851, guid: 61c93067389f09744b477c35e66d6cfe,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8049795329319357852, guid: 61c93067389f09744b477c35e66d6cfe,
         type: 3}
@@ -1233,6 +1203,9 @@ MonoBehaviour:
   - {fileID: 463674114}
   - {fileID: 555256046}
   endPosition: {fileID: 1098864983}
+  spawnPosMoveHazard: []
+  endMoveHazard: {fileID: 887704539479722494, guid: 8acc46b346c9c6e43a16afb1b3194084,
+    type: 3}
   currentScore: 0
   score: {fileID: 603879885}
 --- !u!4 &554570911
@@ -1985,7 +1958,7 @@ PrefabInstance:
     - target: {fileID: 6448882950629242344, guid: c0d5b177540df9149ac600013e7e5b51,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6448882950629242344, guid: c0d5b177540df9149ac600013e7e5b51,
         type: 3}
@@ -2042,14 +2015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a9b316ab07b8d4cb1b0e3dfc66b79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 942206726}
   rb: {fileID: 942206730}
   jumpForce: 800
   groundPoint: {fileID: 738686850}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  grounded: 0
   deathEffect: {fileID: 1523435390365118094, guid: 753192bf43d376643994f128747af4bd,
     type: 3}
   gameOver: {fileID: 351235779}
@@ -2072,7 +2043,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.047721386, y: 1.8465796}
+  m_Offset: {x: 0.047721386, y: 2.0204444}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2083,7 +2054,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4867296, y: 0.36324883}
+  m_Size: {x: 1.4867296, y: 0.7109785}
   m_EdgeRadius: 0
 --- !u!50 &942206730
 Rigidbody2D:
@@ -2227,7 +2198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156459829}
   m_Layer: 0
-  m_Name: ' BGStart'
+  m_Name: BGStart
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2802,6 +2773,12 @@ PrefabInstance:
       propertyPath: moveVel
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8049795329319357848, guid: 61c93067389f09744b477c35e66d6cfe,
+        type: 3}
+      propertyPath: hazardPrefab
+      value: 
+      objectReference: {fileID: 8306322138197564265, guid: 8acc46b346c9c6e43a16afb1b3194084,
+        type: 3}
     - target: {fileID: 8049795329319357851, guid: 61c93067389f09744b477c35e66d6cfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2840,7 +2817,7 @@ PrefabInstance:
     - target: {fileID: 8049795329319357851, guid: 61c93067389f09744b477c35e66d6cfe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8049795329319357851, guid: 61c93067389f09744b477c35e66d6cfe,
         type: 3}
