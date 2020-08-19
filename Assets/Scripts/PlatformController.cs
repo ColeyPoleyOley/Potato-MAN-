@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlatformController : MonoBehaviour
 {
-    public Transform[] spawnPosition;
-    public Transform endPosition;
+    
+ 
 
     public int moveVel = 5;
 
@@ -26,16 +26,16 @@ public class PlatformController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x != endPosition.position.x)
+        if (transform.position.x != GameManager.instance.endPosition.position.x)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(endPosition.position.x, transform.position.y, transform.position.z), Time.deltaTime * moveVel);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(GameManager.instance.endPosition.position.x, transform.position.y, transform.position.z), Time.deltaTime * moveVel);
         }
         else
         {
             if(spawnedCoin != null){
                 Destroy(spawnedCoin);
             }
-            startposition = spawnPosition[Random.Range(0, spawnPosition.Length)];
+            startposition = GameManager.instance.spawnPosition[Random.Range(0, GameManager.instance.spawnPosition.Length)];
             transform.position = startposition.position;
 
             int coin = Random.Range(0, 3);

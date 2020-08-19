@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
+
 {
+    public Transform[] spawnPosition;
+    public Transform endPosition;
     public static GameManager instance;
 
     public int currentScore = 0;
@@ -15,6 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        
     }
 
     // Update is called once per frame
