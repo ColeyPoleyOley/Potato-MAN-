@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlatformController : MonoBehaviour
 {
-    
- 
+
+
 
     public int moveVel = 5;
 
@@ -16,6 +16,9 @@ public class PlatformController : MonoBehaviour
 
     public GameObject coinPrefab;
 
+    public GameObject hazardPrefab;
+
+    GameObject spawnedHazard;
     GameObject spawnedCoin;
     // Start is called before the first frame update
     void Start()
@@ -32,9 +35,11 @@ public class PlatformController : MonoBehaviour
         }
         else
         {
-            if(spawnedCoin != null){
+            if (spawnedCoin != null)
+            {
                 Destroy(spawnedCoin);
             }
+            Destroy(spawnedHazard);
             startposition = GameManager.instance.spawnPosition[Random.Range(0, GameManager.instance.spawnPosition.Length)];
             transform.position = startposition.position;
 
@@ -43,19 +48,29 @@ public class PlatformController : MonoBehaviour
             switch (coin)
             {
                 case 0:
-                    
-        
+
+
 
                 case 1:
-                    spawnedCoin = Instantiate(coinPrefab, coinSpawnPositions[coin].position, Quaternion.identity,transform);
+                    spawnedCoin = Instantiate(coinPrefab, coinSpawnPositions[coin].position, Quaternion.identity, transform);
                     break;
 
                 case 2:
                 default:
                     break;
-
             }
-        }
 
+                    int staticHazard = Random.Range(0, 3);
+                    int chances = Random.Range(0, 10);
+
+                    if (chances < 2)
+                    {
+                        spawnedHazard = Instantiate(hazardPrefab, new Vector3(coinSpawnPositions[staticHazard].position.x, coinSpawnPositions[staticHazard].position.y - -5.00f, coinSpawnPositions[staticHazard].position.z), Quaternion.identity, transform);
+
+
+                    }
+            }
+
+        }
     }
-}
+

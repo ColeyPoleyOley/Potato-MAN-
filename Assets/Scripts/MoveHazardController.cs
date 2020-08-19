@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MoveHazardController : MonoBehaviour
 {
+    public int moveVel = 5;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,10 @@ public class MoveHazardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.x > GameManager.instance.endPosition.position.x)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(GameManager.instance.endPosition.position.x, transform.position.y, transform.position.z), Time.deltaTime * moveVel);
+        }
+
     }
 }
