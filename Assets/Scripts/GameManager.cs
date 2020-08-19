@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public Transform endPosition;
     public static GameManager instance;
 
+    public Transform[] spawnPosMoveHazard;
+    public Transform endMoveHazard;
+
     public int currentScore = 0;
 
     public Text score;

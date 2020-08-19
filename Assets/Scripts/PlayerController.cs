@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Animator anim;
+    Animator anim;
     public Rigidbody2D rb;
 
     public int jumpForce;
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundLayer;
 
-    public bool grounded;
+    bool grounded;
 
     public GameObject deathEffect;
 
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        anim = GetComponent<Animator>();
     }
     //Update method used for phydics in our game, becaues it happens fixed amount of times
     private void FixedUpdate()
