@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 942206726}
   rb: {fileID: 942206730}
-  jumpForce: 600
+  jumpForce: 700
   groundPoint: {fileID: 738686850}
   groundLayer:
     serializedVersion: 2
@@ -2081,7 +2081,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.25
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
