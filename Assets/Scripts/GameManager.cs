@@ -18,7 +18,11 @@ public class GameManager : MonoBehaviour
     public CameraController cameraa;
 
     public int currentScore = 0;
+    public int shieldCounter = 0;
 
+    public int shield = 0;
+
+    public Text shieldNum;
     public Text score;
     // Start is called before the first frame update
     void Start()
@@ -30,13 +34,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        shieldNum.text = shieldCounter + "";
         score.text = currentScore + "";
     }
     public void AddScore()
     {
         currentScore++;
     }
-
     public void RestartGame()
     {
         SceneManager.LoadSceneAsync(0);

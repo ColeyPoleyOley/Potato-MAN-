@@ -18,6 +18,9 @@ public class PlatformController : MonoBehaviour
 
     public GameObject hazardPrefab;
 
+    public GameObject ShieldPrefab;
+
+    GameObject spawnedShield;
     GameObject spawnedHazard;
     GameObject spawnedCoin;
     // Start is called before the first frame update
@@ -39,6 +42,7 @@ public class PlatformController : MonoBehaviour
             {
                 Destroy(spawnedCoin);
             }
+            Destroy(spawnedShield);
             Destroy(spawnedHazard);
             startposition = GameManager.instance.spawnPosition[Random.Range(0, GameManager.instance.spawnPosition.Length)];
             transform.position = startposition.position;
@@ -60,7 +64,7 @@ public class PlatformController : MonoBehaviour
                     break;
             }
 
-                    int staticHazard = Random.Range(0, 2);
+            int staticHazard = Random.Range(0, 2);
                     int chances = Random.Range(0, 10);
 
                     if (chances < 2)
@@ -69,6 +73,12 @@ public class PlatformController : MonoBehaviour
 
 
                     }
+            int staticShield = Random.Range(0, 2);
+                    int tomatoes = Random.Range(0, 20);
+                    if (tomatoes < 2)
+            {
+                spawnedShield = Instantiate(ShieldPrefab, new Vector3(coinSpawnPositions[staticShield].position.x, coinSpawnPositions[staticShield].position.y + 1.02f, coinSpawnPositions[staticShield].position.z), Quaternion.identity, transform);
+            }//end if tomatoes
             }
 
         }

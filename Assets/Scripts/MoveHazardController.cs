@@ -9,8 +9,17 @@ public class MoveHazardController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.instance.player.GameOver();
-
+        if (GameManager.instance.shield < 1)
+        {
+ 
+            GameManager.instance.player.GameOver();
+        }
+        else
+        {
+            GameManager.instance.shield -= 1;
+            GameManager.instance.shieldCounter -= 1;
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update

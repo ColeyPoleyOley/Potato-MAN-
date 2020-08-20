@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public GameObject gameOver;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,9 +50,12 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver()
     {
-        GameManager.instance.cameraa.followPlayer = false;
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        gameOver.SetActive(true);
-        Destroy(gameObject);
+       
+            
+            GameManager.instance.cameraa.followPlayer = false;
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            gameOver.SetActive(true);
+            Destroy(gameObject);
+        
     }
 }

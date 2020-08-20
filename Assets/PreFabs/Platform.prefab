@@ -191,3 +191,5 @@ MonoBehaviour:
     type: 3}
   hazardPrefab: {fileID: 235073344969003200, guid: 8acc46b346c9c6e43a16afb1b3194084,
     type: 3}
+  ShieldPrefab: {fileID: 1588827166661684092, guid: 7a62f3e547bfa6e4796afa69505182cf,
+    type: 3}
