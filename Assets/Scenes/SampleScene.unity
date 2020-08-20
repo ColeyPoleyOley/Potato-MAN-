@@ -340,6 +340,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8049795329319357848, guid: 61c93067389f09744b477c35e66d6cfe,
+        type: 3}
+      propertyPath: hazardPrefab
+      value: 
+      objectReference: {fileID: 235073344969003200, guid: 8acc46b346c9c6e43a16afb1b3194084,
+        type: 3}
     - target: {fileID: 8049795329319357851, guid: 61c93067389f09744b477c35e66d6cfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1206,6 +1212,8 @@ MonoBehaviour:
   spawnPosMoveHazard: []
   endMoveHazard: {fileID: 887704539479722494, guid: 8acc46b346c9c6e43a16afb1b3194084,
     type: 3}
+  player: {fileID: 942206727}
+  cameraa: {fileID: 519420030}
   currentScore: 0
   score: {fileID: 603879885}
 --- !u!4 &554570911
@@ -1405,7 +1413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraa: {fileID: 519420030}
-  player: {fileID: 942206727}
 --- !u!1 &737703657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,7 +2050,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.047721386, y: 2.0204444}
+  m_Offset: {x: 0.04385519, y: 3.026032}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2054,7 +2061,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4867296, y: 0.7109785}
+  m_Size: {x: 1.1200542, y: 2.7221498}
   m_EdgeRadius: 0
 --- !u!50 &942206730
 Rigidbody2D:
@@ -2245,7 +2252,7 @@ RectTransform:
   m_GameObject: {fileID: 1402587332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.85, y: 1, z: 1}
   m_Children:
   - {fileID: 603879884}
   m_Father: {fileID: 84740814}
@@ -2253,7 +2260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 339, y: 156}
+  m_AnchoredPosition: {x: 369, y: 171}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1402587334
@@ -2777,7 +2784,7 @@ PrefabInstance:
         type: 3}
       propertyPath: hazardPrefab
       value: 
-      objectReference: {fileID: 8306322138197564265, guid: 8acc46b346c9c6e43a16afb1b3194084,
+      objectReference: {fileID: 235073344969003200, guid: 8acc46b346c9c6e43a16afb1b3194084,
         type: 3}
     - target: {fileID: 8049795329319357851, guid: 61c93067389f09744b477c35e66d6cfe,
         type: 3}

@@ -60,7 +60,7 @@ public class PlatformController : MonoBehaviour
                     break;
             }
 
-                    int staticHazard = Random.Range(0, 3);
+                    int staticHazard = Random.Range(0, 2);
                     int chances = Random.Range(0, 10);
 
                     if (chances < 2)

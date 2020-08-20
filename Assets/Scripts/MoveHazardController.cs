@@ -9,7 +9,6 @@ public class MoveHazardController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.instance.cameraa.followPlayer = false;
         GameManager.instance.player.GameOver();
 
     }

@@ -189,5 +189,5 @@ MonoBehaviour:
   - {fileID: 1930614618}
   coinPrefab: {fileID: 2883659763881284932, guid: e6181852f49e3684e96dc2dfe2792365,
     type: 3}
-  hazardPrefab: {fileID: 8306322138197564265, guid: 8acc46b346c9c6e43a16afb1b3194084,
+  hazardPrefab: {fileID: 235073344969003200, guid: 8acc46b346c9c6e43a16afb1b3194084,
     type: 3}
