@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public Transform[] spawnPosMoveHazard;
     public Transform endMoveHazard;
 
+    public PlayerController player;
+    public CameraController cameraa;
+
     public int currentScore = 0;
 
     public Text score;

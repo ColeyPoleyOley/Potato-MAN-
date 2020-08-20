@@ -5,8 +5,15 @@ using UnityEngine;
 public class MoveHazardController : MonoBehaviour
 {
     public int moveVel = 5;
-
     
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameManager.instance.cameraa.followPlayer = false;
+        GameManager.instance.player.GameOver();
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
