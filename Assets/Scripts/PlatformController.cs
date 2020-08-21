@@ -69,7 +69,7 @@ public class PlatformController : MonoBehaviour
 
                     if (chances < 2)
                     {
-                        spawnedHazard = Instantiate(hazardPrefab, new Vector3(coinSpawnPositions[staticHazard].position.x, coinSpawnPositions[staticHazard].position.y  +5.00f, coinSpawnPositions[staticHazard].position.z), Quaternion.identity, transform);
+                        spawnedHazard = Instantiate(hazardPrefab, new Vector3(coinSpawnPositions[staticHazard].position.x, coinSpawnPositions[staticHazard].position.y  +2.00f, coinSpawnPositions[staticHazard].position.z), Quaternion.identity, transform);
 
 
                     }
