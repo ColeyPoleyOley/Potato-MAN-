@@ -74,7 +74,7 @@ public class PlatformController : MonoBehaviour
 
                     }
             int staticShield = Random.Range(0, 2);
-                    int tomatoes = Random.Range(0, 20);
+                    int tomatoes = Random.Range(0, 80);
                     if (tomatoes < 2)
             {
                 spawnedShield = Instantiate(ShieldPrefab, new Vector3(coinSpawnPositions[staticShield].position.x, coinSpawnPositions[staticShield].position.y + 1.02f, coinSpawnPositions[staticShield].position.z), Quaternion.identity, transform);

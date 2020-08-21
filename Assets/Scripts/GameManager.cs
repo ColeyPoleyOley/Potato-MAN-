@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         shieldNum.text = shieldCounter + "";
         score.text = currentScore + "";
+
     }
     public void AddScore()
     {
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
     {
+        score.text = "Fuck you xi";
         SceneManager.LoadSceneAsync(0);
     }
 }
