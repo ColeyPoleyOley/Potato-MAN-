@@ -39,15 +39,27 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("Jump");
             rb.AddForce(Vector2.up * jumpForce);
-            
+
 
 
         }//end if
+    
 
-        anim.SetFloat("yVelocity", rb.velocity.y);
+    anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("Grounded", grounded);
     }
 
+    public void Jump()
+    {
+        if (grounded)
+        {
+            anim.SetTrigger("Jump");
+            rb.AddForce(Vector2.up * jumpForce);
+
+
+
+        }//end if
+    }
     public void GameOver()
     {
        
